@@ -1,0 +1,16 @@
+<h1>Blog Posts</h1>
+
+<% @posts.each do |post| %>
+	<div class="post">
+		<div class="post_title">
+			<%= post.title %>
+		</div>
+		<div class="post_body">
+			<%= truncate(post.body, :length => 50) %>
+		</div>
+		<%= link_to 'Show', @post %>
+		<%= link_to 'Edit', edit_post_path %>
+	</div>
+<% end %>
+
+<%= link_to 'New Blog Post', new_post_path %>
