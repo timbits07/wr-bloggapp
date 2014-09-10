@@ -8,6 +8,9 @@
 		<div class="post_body">
 			<%= truncate(post.body, :length => 50) %>
 		</div>
+		<div>
+			<%= image_tag post.picture(:thumb) %>
+		</div>
 		<%= link_to 'Show', @post %>
 		<%= link_to 'Edit', edit_post_path %>
 	</div>
