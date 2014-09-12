@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+    	sign_in @user
 			redirect_to posts_path	
 		else
       render :action => 'new'
@@ -65,7 +66,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password_digest, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation)
     end
 
     def find_user
