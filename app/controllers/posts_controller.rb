@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   def index
-  	@posts = Post.all
+    respond_to do |format|
+      format.html { @posts = Post.all.reverse }
+      format.json { @posts = Post.all.reverse }
+    end
   end
 
   def new

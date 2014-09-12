@@ -1,18 +1,26 @@
 <h1>Blog Posts</h1>
+<%= link_to 'New Blog Post', new_post_path %>
+<hr/>
 
 <% @posts.each do |post| %>
 	<div class="post">
 		<div class="post_title">
+			<h3>Title: </h3>
 			<%= post.title %>
 		</div>
 		<div class="post_body">
+			<h3>Body: </h3>
 			<%= truncate(post.body, :length => 50) %>
 		</div>
 		<div>
 			<%= image_tag post.picture(:thumb) %>
 		</div>
+		<div>
+			<%= post.created_at.strftime("%m/%d/%y") %>
+		</div>
 		<%= link_to 'Show', post %>
 	</div>
+	<hr/>
 <% end %>
 
 <%= link_to 'New Blog Post', new_post_path %>
