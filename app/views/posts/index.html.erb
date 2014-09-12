@@ -1,5 +1,6 @@
 <h1>Blog Posts</h1>
 <%= link_to 'New Blog Post', new_post_path %>
+<%= link_to 'Sign Out', sign_out_path, :method => "delete" %>
 <hr/>
 
 <% @posts.each do |post| %>

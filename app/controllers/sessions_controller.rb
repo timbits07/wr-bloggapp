@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_filter :signed_in_user
 	def new
 		if signed_in?
       redirect_to posts_path
