@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  skip_before_action :signed_in_user, only: :index
   def index
     respond_to do |format|
       format.html { @posts = Post.all.reverse }
