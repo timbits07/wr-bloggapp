@@ -27,6 +27,7 @@ module WrBlogapp
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    # This allows the json pages to receive get requests from any website.  If I want to narrow it down to one replace '*' with proper header info.
     config.action_dispatch.default_headers = {
         'Access-Control-Allow-Origin' => '*',
         'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
