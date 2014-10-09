@@ -64,3 +64,4 @@ gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
 
 gem 'pg'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'newrelic_rpm'
