@@ -20,6 +20,7 @@
 			<%= post.created_at.strftime("%m/%d/%y") %>
 		</div>
 		<%= link_to 'Show', post %>
+		<%= link_to 'Edit', edit_post_path(post[:id]) %>
 	</div>
 	<hr/>
 <% end %>

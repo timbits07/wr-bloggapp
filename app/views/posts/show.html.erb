@@ -4,4 +4,5 @@
 <%= @post.body %><br/>
 <%= image_tag @post.picture(:medium) %>
 
+<%= link_to 'Edit', edit_post_path(@post[:id]) %>
 <%= link_to 'Back', posts_path %>
