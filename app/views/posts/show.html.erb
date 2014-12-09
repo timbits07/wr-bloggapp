@@ -1,7 +1,7 @@
 
 
-<%= @post.title %><br/>
-<%= @post.body %><br/>
+<h2><%= @post.title %><h2><br/>
+<%= simple_format(@post.body) %><br/>
 <%= image_tag @post.picture(:medium) %>
 
 <%= link_to 'Edit', edit_post_path(@post[:id]) %>
